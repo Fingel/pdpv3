@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>
+        Pedal Driven Programming
+      </title>
+      {% block css %}
+      <link rel="stylesheet" type="text/css" href="{% static 'pico/css/pico.cyan.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'base/css/main.css' %}">
+      {% endblock %}
+      {% block extra_css %}{% endblock %}
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <nav>
+          <ul>
+            <li class="logo">{% include 'base/gears.svg' %}</li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="#">Photos</a></li>
+          </ul>
+        </nav>
+      </aside>
+      <main>
+      {% block content %}
+      {% endblock %}
+      </main>
+    </div>
+    {% block javascript %}
+    <script src="{% static 'prismjs/components/prism-core.min.js' %}"></script>
+    <script src="{% static 'prismjs/plugins/autoloader/prism-autoloader.min.js' %}"></script>
+    <script type="module" src="{% static 'prism-remote/prism-remote.js' %}"></script>
+    <script src="{% static 'htmx/htmx.js' %}"></script>
+    <script src="{% static 'base/js/gears.js' %}"></script>
+    {% endblock %}
+    {% block extra_javascript %}{% endblock %}
+  </body>
+</html>

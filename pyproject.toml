@@ -1,0 +1,16 @@
+[project]
+name = "pedaldrivenprogramming"
+version = "3.0.0"
+dependencies = [
+    "Django",
+    "whitenoise[brotli]"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pip-tools",
+    "ruff"
+]
+
+[tool.setuptools]
+py-modules = []
