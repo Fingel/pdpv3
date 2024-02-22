@@ -12,11 +12,23 @@ build==1.0.3
     # via pip-tools
 click==8.1.7
     # via pip-tools
-django==5.0.2
+dj-database-url==2.1.0
     # via pedaldrivenprogramming (pyproject.toml)
+django==5.0.2
+    # via
+    #   dj-database-url
+    #   django-stubs
+    #   django-stubs-ext
+    #   pedaldrivenprogramming (pyproject.toml)
+django-stubs==4.2.7
+    # via pedaldrivenprogramming (pyproject.toml)
+django-stubs-ext==4.2.7
+    # via django-stubs
 packaging==23.2
     # via build
 pip-tools==7.4.0
+    # via pedaldrivenprogramming (pyproject.toml)
+psycopg==3.1.18
     # via pedaldrivenprogramming (pyproject.toml)
 pyproject-hooks==1.0.0
     # via
@@ -26,6 +38,16 @@ ruff==0.2.2
     # via pedaldrivenprogramming (pyproject.toml)
 sqlparse==0.4.4
     # via django
+types-pytz==2024.1.0.20240203
+    # via django-stubs
+types-pyyaml==6.0.12.12
+    # via django-stubs
+typing-extensions==4.9.0
+    # via
+    #   dj-database-url
+    #   django-stubs
+    #   django-stubs-ext
+    #   psycopg
 wheel==0.42.0
     # via pip-tools
 whitenoise==6.6.0

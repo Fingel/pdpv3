@@ -3,11 +3,14 @@ name = "pedaldrivenprogramming"
 version = "3.0.0"
 dependencies = [
     "Django",
-    "whitenoise[brotli]"
+    "dj-database-url",
+    "psycopg",
+    "whitenoise[brotli]",
 ]
 
 [project.optional-dependencies]
 dev = [
+    "django-stubs",
     "pip-tools",
     "ruff"
 ]
