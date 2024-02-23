@@ -1,0 +1,6 @@
+{% extends 'base/base.html' %}
+{% load blog_extras %}
+{% block content %}
+<p>{{ object.title}}</p>
+<p>{{ object.content|convert_markdown}}</p>
+{% endblock %}

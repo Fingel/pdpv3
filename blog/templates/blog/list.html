@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<ul>
+{% for post in latest %}
+    <li>
+        <a href="{{ post.get_absolute_url }}">
+            {{ post }}
+        </a>
+    </li>
+{% endfor %}
+</ul>
+{% endblock %}
