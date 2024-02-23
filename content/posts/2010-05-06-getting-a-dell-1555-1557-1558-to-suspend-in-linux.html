@@ -1,0 +1,29 @@
+---
+categories:
+- Technology
+date: 2010-05-06 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: Getting a Dell 1555, 1557, 1558 to Suspend in Linux
+type: post
+---
+
+<span style="color: #ff0000;">EDIT:</span> The suspend/resume patch has been included in 2.6.33.4 However brightness control with a dell 1558 is still broken without patches. I have uploaded precompiled kernel packages for Arch linux <a href="http://www.austinriba.com/misc/kernel-patched/">here</a> which solve the problem. You can find patches for other distros <a href="http://kernel.ubuntu.com/~kamal/">here</a>. 
+
+Dell Laptops with model numbers 1555, 1557 and 1558 have issues with suspend and resume on linux, there is a patch, but it has not been included in the latest kernel version yet.
+
+I have sucessfully gotten my new Dell 1558 to sleep and wake using a patch I found <a href="http://kernel.ubuntu.com/~kamal/dell_155x_resume/">here</a>. The patch is for the linx kernel, specifically drivers/acpi/sleep.c It adds just a few lines.
+
+For those of you using Arch Linux, I've uploaded the patched kernel packages here:
+
+<a href="http://www.austinriba.com/misc/kernel-patched/">http://www.austinriba.com/misc/kernel-patched/</a>
+
+If you are using Ubuntu, you can find packages <a href="http://kernel.ubuntu.com/~kamal/dell_155x_resume/">here</a>.
+
+If you are using another distribution, you must apply the patch to your kernel's source and recompile. Follow the instrucions for whichever distro you use on how to do this. You can find the patch here:
+
+<a href="http://www.austinriba.com/misc/kernel-patched/dell.patch">http://www.austinriba.com/misc/kernel-patched/dell.patch</a>
+
+Enjoy your functional laptop!

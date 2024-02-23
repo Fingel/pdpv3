@@ -1,0 +1,101 @@
+---
+categories:
+- cycling
+date: 2013-12-01 15:48:28
+title: War Bikes
+---
+
+<!-- {{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/image.jpg -->
+<center>
+[![Mark 1]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/mark1.jpg "Mark1")]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/mark1.jpg)
+</center>
+
+I can't think of anything more align with progressive values than the bike. The weapon of choice
+for the modern day bohemian - with it's obvious practical use as a means of transportation
+augmented by the enormous health, environmental and economical benefits endowed to
+the rider. Not to mention biker's butt. Nay, it appears there is nothing but
+[butterflies and sunshine](http://www.bikerfox.com/foxphotos2/) surrounding the
+subject of the cycle.
+
+Except that a bicycle is a machine and a machine's utility is defined by it's use.
+
+<!--more-->
+
+Cycling saw a huge surge of popularity in the late 19th century. In particular the invention of
+the [safety bicycle](https://en.wikipedia.org/wiki/Safety_bicycle) and the pneumatic
+tire suddenly made the machines a practical and accessible means of transportation for
+everyone.
+
+Military thinkers were attracted to these machines for their obvious benefits: they were
+easy to manufacture, cheaper than horses, relatively silent and portable. Though it
+may seem silly now, by World Word I nearly all major militaries had incorporated bicycles
+into their ranks in some way.
+
+[![Austrian Army Ass Slide]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/history.jpg "Austrian Army Ass Slide")]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/history.jpg)
+
+In the 1890's the Austrian army experimented with folding bikes for their infantry. Looking at
+these illustrations it is hard not to feel sorry for these men.
+The bikes were made of steel and heavy rubber, supposedly weighing up to 50 pounds each.
+They snagged on branches and other obstacles while strapped to the back, and could only
+be removed with help from a comrade. Unfolding a refolding was a time consuming
+process, and they bikes were flexy and janky to ride. It quickly became apparent
+that what seemed practical in theory, was anything but.
+
+Folding bikes (which to this day are still pretty lame) may have been scrapped,
+but military use of the bicycle continued. During WWI They proved to be an effective means
+to move troops to front lines quickly and were especially useful as couriers. During the
+[invasion of Belgium](https://en.wikipedia.org/wiki/Belgium_in_World_War_I#German_invasion)
+German officers made use of bicycle messengers sent in advance of the main invasion to warn the populace of the coming occupation and to urge them not to do silly things like blow up bridges,
+refuse soldiers in their homes, or any other general showing of resistance.
+
+[![25th Bicycle Corps in Yellowstone]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/yellowstone.jpg "25th Bicycle Corps in Yellowstone")]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/yellowstone.jpg)
+
+
+Another noteworthy deployment of the military bicycle was the
+[25th Bicycle Corps of the U.S Army](http://bicyclecorps.blogspot.com/), a unit
+of buffalo soldiers led by the sorta-off Lt. James A. Moss. The corps rode
+from Fort Missoula, Montana to St Louis, Missouri supposedly as an experiment to see see if
+the bicycle served a purpose in the US army. However I think that Lt. Moss was
+simply more comfortable with a bike pump in hand than a rifle:
+
+>Again and again would we stop along the road to look at paint pots, pools, springs, geysers, etc. Riding through the Gibbon Meadows we then turned off into Gibbon Canyon, deep, sinuous and picturesque. For miles we fared along the windings of the road, with the ever beautiful waters of Gibbon River at our side, now admiring this, then admiring that. Indeed, this was the very poetry of cycling.
+
+and that the whole expedition was more likely an elegant excuse thought up by
+a guy who just wanted to ride his bike - but also happened to be in command of a small
+unit of soldiers in the American frontier.
+
+World War I saw not only small units but entire companies and regiments made up of cyclists on all sides of the conflict. This trend continued into WWII.
+
+[![Japanese invade Malay]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/japanese.jpg "Japanese invade Malay")]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/japanese.jpg)
+
+Probably the most famous example of the effective use of bicycles in a military
+conflict came from the [Malayan Campaign](https://en.wikipedia.org/wiki/Malayan_Campaign)
+, fought between British Commonwealth army units and the Imperial Japanese Army.
+Due to their cycles the
+Japanese units were able to move quickly through the jungle terrain while evading,
+outmaneuvering, and cutting off British troops. The battle was a complete disaster
+for allied forces, who suffered 12 times as many casualties despite having twice as many men.
+
+In a bit of personal history, my Grandmother's friend Robert Littlefild recalled
+his experience as a downed fighter pilot in France during WWII in his book
+[Double Nickel Double Trouble](https://www.goodreads.com/book/show/1537660.Double_nickel_double_trouble). After being found by members of the
+French Resistance, Lt. Littlefield had the opportunity to go for a ride:
+
+> A short time later three men, one with an arm in a sling, called me out of the hay
+and told me they were taking me to an English speaking lady. Two bicycles were
+provided for Marcel and myself and we set off down a dirt road until we arrived
+at a main cement highway. In about 20 minutes we arrived at Chateu le Matre,
+a large 150 year old, three story building.
+
+Better than walking, eh Bob?
+
+[![WW1 Germany Bicycles]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/ww1germany.jpg "WW1 Germany Bicycles")]({{site.image_url}}/{{page.id | replace: '/','-' | remove_first: '-'}}/ww1germany.jpg)
+
+In modern times, military use of the bicycle has been all but phased out. It seems
+that in the age of stealth bombers, long range missiles and remote control drones,
+there is simply not much military use for the bike. That is in battle, anyways. The legendary
+war monger George W. Bush claims to be [an avid mountain biker](http://www.bicycling.com/sites/default/files/images/Bush_Trails.jpg)(get off the brakes, George), a fact which still
+lends him no credibility.
+
+In any case, the bicycle is still the Most Noble Invention, and it's use in warfare
+only proves this incredible machine's versatility.

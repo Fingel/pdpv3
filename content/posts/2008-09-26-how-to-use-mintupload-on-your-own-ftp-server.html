@@ -1,0 +1,45 @@
+---
+categories:
+- Technology
+date: 2008-09-26 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: How to use mintUpload on your own FTP server.
+type: post
+---
+
+I installed Linux Mint yesterday because my Ubuntu installtion was starting to get a little messed up from all the costant configuration, reconfiguration, and installation of new (and often not stable) packages. Nothing like a fresh start right?
+
+Mint Linux has some cool custom applications, one of them being mintUpload. It allows you to upload a file in 2 clicks to a FTP server and gives you the URL. Unfortuneatly, Mint doesnt make it easy to confugre the tool to use any service other than its own crappy one. But it is possible.
+
+If you have your own server you want to use with mintUpload, just follow these steps.
+
+1) Create a writeable directory on your webserver where you want the uplaods to go, ex. /httpdocs/uploads
+
+2) Create a file in that directory named "space.html" and put a single line in it: 100000000/100000000 This will tell mintUpload how much space you have, but since its your own server and we dont really care to keep track how much space is left, it will be static.
+
+3) Go to /usr/lib/linuxmint/mintUpload/services and create a file with the name of your server.
+
+4) Put this in your file:
+
+name=&lt;YourName&gt;
+host=&lt;YourHost&gt;
+user=&lt;FTP Username&gt;
+pass=&lt;FTP Password&gt;
+path=&lt;Path to upload folder, ex httpdocs/uploads/&gt;
+space=&lt;Path to space.html&gt;
+url=&lt;URL to upload directory&gt;/&lt;TIMESTAMP/&lt;FILE&gt;
+maxsize=1000000000
+persistance=365
+
+Note that &lt;TIMESTAMP&gt; and &lt;FILE&gt; are variables used by mintUpload and you should leave them as they are.
+
+Save the file, and you should now have a working service in mintUpload! This works great, but there was one thing that still annoyed me. mintUpload places the files in subdirectories named from timestamps of the main upload folder. This is great if you are hosting a service that thousands of people will be using and the files will be deleted every so often. But I'm the only one using this service so it would be better if the files went directly into the uploads folder without and subdirectories so they can be easily viewed. To fix that:
+
+1) change url=&lt;path to upload directory&gt;/&lt;TIMESTAMP/&lt;FILE&gt; to url=&lt;path to upload directory&gt;/&lt;FILE&gt;
+
+2) Open /usr/lib/linuxmint/mintUpload/mintUpload.py and comment out lines 155, 156, 157 and 162. To comment out a line, simply put a # in front of it. ex: #ftp.cwd(directory)
+
+Save the file, now all uploads will go directly into the upload directory without any subdirectories. Cheers!

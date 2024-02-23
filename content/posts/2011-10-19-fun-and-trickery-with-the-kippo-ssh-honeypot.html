@@ -1,0 +1,33 @@
+---
+categories:
+- Linux
+- Technology
+date: 2011-10-19 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: Fun and Trickery with the Kippo SSH Honeypot
+type: post
+---
+
+I was recently tasked with setting up a <a title="Honeypot (wikipedia)" href="http://en.wikipedia.org/wiki/Honeypot_%28computing%29" target="_blank">honeypot</a> for an organization that wanted some better insight into who was snooping around in their network. For those of you too lazy to read, what is a honeypot? Well remember in 3rd grade when we made leprechaun traps out of shoeboxes that usually consisted of some elaborate setup to trick the little men into thinking they were getting their hands on a pot 'o gold? Well think of it like that, except with computers. And networks. And hackers, espionage, subterfuge... etc. Its a server that we put out there with the <em>intention </em>of it getting hacked so that when the attacker does enter, we can gain information about them and better defend our real network against them. Basically:
+
+<center>
+<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2011/10/Ackbar.jpg"><img class="aligncenter size-medium wp-image-540" title="Ackbar" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2011/10/Ackbar-231x300.jpg" alt="" width="231" height="300" /></a></center>
+This particular honeypot I was to set up didn't need to be too complicated. Really all we wanted was to be able to listen on SSH and get notified if anyone connected - that's enough because there would be no reason for any of use to ever connect to this server. That's when I found <a title="Kippo" href="http://code.google.com/p/kippo/" target="_blank">Kippo</a>. Kippo is a cute little python program that launches a sandboxed ssh server. It is semi interactive, meaning that to anyone who connects it would appear (at least for a while) that they have actually connected to a real server. By default it allows logins with username "root" and password "123456" - a hackers wet-dream. What can kippo do once an attacker has connected?
+<ul>
+	<li>Understands most unix commands. mkdir, ls, tar, cat, etc.</li>
+	<li>Has a fake filesystem you can actually read/write to.</li>
+	<li>Allows use of wget (!) and stores any files downloaded this way in a folder accessible by us.</li>
+	<li>Of course, logs all commands.</li>
+	<li>Cool tricks:  You can create commands that do nothing but output text. This can make an attacker very confused. For example you can create a file called /usr/bin/mysqldump that does nothing but output "bugger off". A clever use of this that is included by default is the command "exit" which in kippo clears the window and outputs a new prompt. This makes it appear that you have disconnected from the server back to your machine when in reality you are still connected to kippo and it is logging all your commands!</li>
+	<li>As I mentioned before, you can use wget to download files, untar them etc, but when it comes to actually running anything, kippo won't allow it and outputs more confusing messages. See screenshot below where I downloaded a program, tried running it but got an <em>infuriating </em>owl instead.</li>
+</ul>
+<center>
+<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2011/10/Screenshot-at-2011-10-19-152411.png"><img class="aligncenter size-medium wp-image-541" title="Screenshot at 2011-10-19 15:24:11" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2011/10/Screenshot-at-2011-10-19-152411-300x213.png" alt="" width="300" height="213" /></a></center>
+That's me connected to Kippo at the top as if I was an attacker, and then the log files from the actual server below. Good stuff. My only concern with this program is its security. Its a honeypot, but how secure is it? Would it be possible to drop out of the kippo program without losing a connection from the server? Or somehow execute commands from within kippo that can make it out of the sandbox? From what I can tell, it seems pretty secure, but it is hard to tell.
+
+Damn funny though. So far I recommend it, and I'm thinking of setting one of these up in amazon open to the world just to see what kind of people wander in. You can watch a pretty good replay of a real session of kippo in use on the <a title="Kippo Demo" href="http://kippo.rpg.fi/playlog/?l=20100316-233121-1847.log" target="_blank">demo page</a>. Grab the popcorn.
+
+&nbsp;

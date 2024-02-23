@@ -1,0 +1,37 @@
+---
+categories:
+- code
+- featured
+date: 2013-09-03 00:00:00
+featured_image: shaftoe.png
+meta:
+  _edit_last: '1'
+  _wp_old_slug: shaftoe-a-simple-web-service-for-encrypting-messages-using-pgp
+  _wpas_done_all: '1'
+published: true
+status: publish
+title: Shaftoe - A Simple Web Service for Encrypting Messages Using PGP
+type: post
+---
+
+Wouldn't it be awesome if we starting seeing websites like this?
+
+<img class="aligncenter size-full wp-image-905" alt="signup" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2013/08/signup.png" width="500" height="536" />
+
+I usually hear people say they don't use PGP because nobody else does. A fair complaint - PGP isn't exactly easy to set up and without the proper motivation it's hard to convince the people you communicate with to use it too.
+
+But PGP isn't so hard to set up that our machines can't use it to send us messages. If someone wants their email send to them encrypted, it really should be as easy to tell the app in question to use their public key either by providing it or looking it up via PKI.
+
+Shaftoe is a proof of concept of how that can be done. It's a simple webservice, 2 methods only: one for storing keys, and the other for encrypting text using those keys. The bare minimum needed for encrypting email with PGP. You can find instructions on how to download and run it yourself on <a href="https://github.com/AustinRiba/shaftoe">Github</a>.
+
+The script is written in PHP because it uses Jason Hinkle's excellent <a href=" https://github.com/jasonhinkle/php-gpg">php-pgp</a> library. This was the only decent and working OpenPGP implementation I could find that doesn’t require a compiled binary and all it does is encrypt. In fact it works very well.
+
+<strong>Below is an example using the service. It asks you for an idetifier and your public key in ASCII format, then returns a random encrypted quote.</strong>
+
+The service could just as easily be used by an application to encrypt email before sending it.
+
+<a href="http://toxiccode.com/shaftoe/example/index.html">View outside of Iframe</a>
+
+<iframe width="670" height="800" src="http://toxiccode.com/shaftoe/example/index.html"></iframe>
+
+Details and installation instructions can be found on <a href="https://github.com/AustinRiba/shaftoe">Github</a>

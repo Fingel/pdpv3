@@ -1,0 +1,23 @@
+---
+categories:
+- Linux
+- Technology
+date: 2010-09-02 00:00:00
+meta:
+  _edit_last: '1'
+  _wp_old_slug: ''
+published: true
+status: publish
+title: Best Bash Prompt Ever
+type: post
+---
+
+Ever wish your command line was a little more friendly? Maybe you'd like to add some emotion to your static computing environment? I give you the smiley face bash prompt!
+
+[caption id="attachment_441" align="alignnone" width="495" caption="Font is terminus, btw."]<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2010/09/Screenshot-Terminal-1.png"><img class="size-full wp-image-441" title="Screenshot-Terminal-1" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2010/09/Screenshot-Terminal-1.png" alt="" width="495" height="116" /></a>[/caption]
+
+This bash prompt displays a green smiley face or a red frowny face depending on the return status of the last command executed. To use it, insert the following code to the end of your ~/.bashrc file:
+
+PS1="\[\e[01;32m\]\u@\h \[\e[01;34m\]\W \`if [ \$? = 0 ]; then echo -e '\[\e[01;32m\]:)'; else echo -e '\[\e[01;31m\]:('; fi\` \[\e[01;34m\]$\[\e[00m\]"
+
+Happy (or sad) computing!

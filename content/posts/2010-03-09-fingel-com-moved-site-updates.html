@@ -1,0 +1,24 @@
+---
+categories: []
+date: 2010-03-09 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: Fingel.com Moved, Site Updates
+type: post
+---
+
+<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2010/03/tiger.jpg"><img class="alignleft size-medium wp-image-314" title="tiger" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2010/03/tiger-300x300.jpg" alt="" width="300" height="300" /></a>So I finally got around to merging the old Fingel.com with this new site, which is now austinriba.com and Fingel.com. Spiffy.
+
+Sorry laughingsquid, I just can't hang with your hosting anymore. I know you just launched a new cloud hosting plans, but I'm on the old system, and its just not working out. My main complaint is the mail system. You only allow 70mb of storage? Is that really sufficient in today's world? I love my @fingel.com email address, but I've basically had to stop using it because time and time again, my mailbox fills up. I set it up as a forward, but that doest help. The mail system still stores my incoming messages, and THEN forwards them. So when my box fills up I simply stop getting mail with no notification that something is wrong. Notgood. If I could find an option to forward without storing, or to delete messages after a certain period, I would have kept using it but... now its too late. I've switched the DNS entries over to 1&amp;1. I know 1&amp;1 sucks pretty bad, but at least its cheap and I dont have to worry about running out of space and missing mail.
+
+Ok so enough of that rant. Here is something usefule: Worpress has an awesome feature that lets you export/import entire blogs, including attachments and comments. This made it easy for me to import my entire old blog into this one, as if nothing had changed. Even the old fingel.com links that are floating out there on the internet are still pointing to the correct URL. Not bad!
+
+1&amp;1 users who try to import wordpress blogs might find that the process crashes with an error "out of memory." To fix it, place a file named php.ini in your /wp-admin/ directory that contains the line:
+
+memory_limit= 20M
+
+This should allow the import to proceed without crashing. However, when I did it the import would still stop after importing quite a bit of stuff, and I would have to reload the page to restart it where it had left off. I did this about 7 - 8 times and eventually it got my whole blog, with a nice message at the bottom "Good to go!" that let me know it was finished.
+
+Lastly, I updated the design of the site. I dont like the name of the site, "Austin Riba" its terribly boring. But until I think of something else, I'm leaving it at that. Hope you like it.

@@ -1,0 +1,62 @@
+---
+categories:
+- Technology
+date: 2008-04-22 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: Put That Rejected Old Computer to Use
+type: post
+---
+
+Most of you probably have an old computer laying around somewhere. Chances are, its all bundled up sitting sadly in a dusty closet somewhere. Well I strongly believe there is no reason to ever have a comp around not plugged in, and I'm going to share some of my favorite things to do with my old computers with your (or your parent's, or friends')
+
+***Obligatory Linux Plug***
+
+I always install Linux on my old junkers even if I use Windows Vista on my main machine. There are many reasons including performance and price, but the main reason is that Linux does these following things REALLY well. In fact, Linux is almost specialized for some of the tasks at hand, like running servers. If you<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/tux.jpg"><img class="alignright size-full wp-image-93" title="tux" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/tux.jpg" alt="tux" width="48" height="48" /></a> have never installed Linux before I recommend trying <a title="ubuntu" href="http://www.ubuntu.com/" target="_self">Ubuntu</a> Its really easy to install and use, and even if you do mess up, your working with a junker anyways - what do you have to lose? I also recommend checking out my other page, <a title="Shell Account HowTOS" href="http://www.fingel.com/shelltut/" target="_self">Shell Account Howtos</a> for some of the basics of managing Linux remotely (and believe me you will want to do this)
+
+***End Obligatory Linux Plug***
+
+<strong>1. Turn your computer into a killer jukebox.</strong>
+
+If you have a killer stereo system in your house but never use it because you have to make CDs for it, this is for you. The first thing you will have to get is one of these doohickeys:
+<p style="text-align: center;"><img class="alignnone" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/rca.gif" alt="rca cabel" /></p>
+<p style="text-align: left;">Do the parts look familiar? They should. The black end fits in any 3.5mm audio jack that you find on ipods, cd players and most importantly, computers. The other end connects to left/right RCA jacks.</p>
+After you get one of the cables, simply connect your computer and stereo, and switch your stereo to aux input. Now any sound that comes out of your computer will play on your stereo. If you haven't already, copy all your music onto the computer, then simply launch a music player.
+
+The basic setup might not be very convenient, especially if you are pressed for space and don't have room for a computer in your living room or whatnot. Nows the time to learn how to use a remote desktop, like <a title="vnc" href="http://www.tightvnc.com/">VNC</a> or <a title="openssh" href="http://www.openssh.org/">SSH</a> that allow you to remotely control your computers, so you can take all that dirty human interface stuff off, like the mouse, keyboard and screen. Now thats cool! Even better, coupled with a file share, the next example, you can share music from your main computer to the jukebox seamlessly.
+
+<strong>2. Set up a home file server</strong>
+
+If you have multiple computers in one house and a router, you would be crazy not to set up a file server. You would never think how much you use until you try it. <a title="samba" href="http://us3.samba.org/samba/" target="_self">Samba</a> and <a title="nfs" href="http://en.wikipedia.org/wiki/Network_File_System_(protocol)">NFS</a> for windows and Linux, respectively, are the standards today. Samba is the way to go, because your Linux, mac and windows machine can all use it. Once you have everything running you can share files between all computers practically instantly.
+
+<strong>3. Hello world! Put up your own website.</strong>
+
+If you don't already have a website, my first question would be what are you waiting for? Even if you do have one, setting up another is good for backup or stuff you don't necessarily want to put on your other. Using an old computer to run a website is great because you have complete control, and it runs off your home internet conne<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/feather.gif"><img class="alignleft size-full wp-image-94" title="feather" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/feather.gif" alt="" width="267" height="80" /></a>ction so it doesn't cost any extra.
+
+In Linux, setting up a web server is as simple as typing "sudo apt-get install apache2" to install <a title="apache" href="http://www.apache.org/" target="_self">Apache</a> and opening up port 80. Installing other things like <a href="http://www.php.net/" target="_self">PHP</a>, <a title="mysql" href="http://www.mysql.com/" target="_self">MySQL</a> and FTP servers is just as easy. You can literally have a fully featured website running a CMS like <a title="joomla!" href="http://www.joomla.org/">Joomla</a> or a gallery like <a title="gallery2" href="http://gallery.menalto.com/">Gallery2</a> in minutes - and all the world can access it.
+
+If you are using windows, which I never have, things may be a little more difficult/different. You can install apache on windows too, as well as the others like MySQL and PHP, but I've never done it. I will leave that up to you to find out.
+
+Once you have your website up and it is accessible to the internet, you can access it by typing in your IP address. However, thats long cryptic and hard for others to memorize. You will probably want to check out a free dns service like <a title="no-ip free dns" href="http://www.no-ip.com" target="_self">no-ip.com</a> so you can get a cool address like <a title="the horror hotel" href="http://austum.hopto.org" target="_self">http://austum.hopto.org</a> (this is one of my old comps I have running a webserver) Congratulations! You now have a home on the internet. Be sure to leave me the address so I can check it out.
+
+<strong>4. Host a bloody frag box.</strong>
+
+If you are into online gaming, you probably play on servers every day. Wouldn't it be cool to run your own? Even if you own a simple DSL or cable modem you can host multiplayer games. Most companies release<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/unreal.gif"><img class="alignright size-full wp-image-95" title="unreal" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/unreal.gif" alt="" width="60" height="60" /></a> server editions of the game for free, so you don't even need to own the game to run a server. More likely, you want to run a server of a game that you play and like, so you will already have the server installed - even if you don't know it yet.
+
+I run a Unreal Tournament 1999 server that me and my friends play on often. Since they are all in close proximity to the physical location of the server, the pings are amazing. Of course, you are welcome to join us too:
+<a href="http://www.gametracker.com/server_info/24.6.148.91:7777/" target="_blank">
+<img src="http://cache.www.gametracker.com/server_info/24.6.148.91:7777/b_350x20_C323957-202743-F19A15-111111.png" border="0" alt="" /></a>
+
+This is also the same server I run my webserver and everything else on. Remember -  you are not running the game, just the server. You don't need to have a thousand dollar quad core triple liquid heatsink video card to run it. As long as you have at least a pentium IV processor you should be fine, especially if its an older game.
+
+<strong>5. Bypass your work or school's restrictive firewall.</strong>
+
+You have probably heard of proxy servers before. They allow you to reroute your internet traffic so that you can surf the web anonymously or visit blocked websites. The problem with public proxies is they are often<a href="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/bittorrent.jpg"><img class="alignleft size-full wp-image-96" title="bittorrent" src="https://s3-us-west-2.amazonaws.com/pedaldp/uploads/2008/04/bittorrent.jpg" alt="" width="250" height="62" /></a> very slow and you don't really know where they are or who is running them. Set up your computer as a proxy and you can use it from anywhere to download from bittorrent, surf blocked sites and do other sneaky things. You can read my page on how to do this on Linux in the <a title="shell" href="http://www.fingel.com/shelltut/" target="_self">Shell Account Howtos</a>
+
+<strong>And more...</strong>
+
+There are many things you can do with those extra computers laying around. If you have more than 1, you can try making a Frankencomputer by combining all the parts. Often times this results in 1 much faster computer! Use your imagination! I'm sure you can think of something.
+
+Let me ask you if I missed something. What do you do with your old computers? I'm always open to new ideas.

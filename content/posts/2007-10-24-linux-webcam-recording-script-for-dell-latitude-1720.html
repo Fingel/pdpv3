@@ -1,0 +1,19 @@
+---
+categories:
+- Technology
+date: 2007-10-24 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: Linux Webcam Recording Script for Dell Latitude 1720
+type: post
+---
+
+Since the Latitude 1720's webcam is only supported by a handful of applications (see the <a href="http://linux-uvc.berlios.de/">Linux UVC homepage</a>) and none of them are for recording vidoes with sound, I decided to come up with a quick workaround. I wrote a tiny shell script called record.sh which just runs two commands at the same time, ffmpeg and sound-record so that they are synced up. It goes like this:
+
+!#/bin/sh
+ffmpeg -f video4linux2 -s 320x240 -i /dev/video0 -f avi out.avi &amp;
+sound-recorder -c 2 -b 16 -P recording.wav
+
+This should outpit out.avi and recording.wav in the current directory, and then you can put the two together using your viedo editor of choice. I use Pitivi and walla, you have a video ready for youtube or whatnot. Now my laptop is, I think, fully functional.

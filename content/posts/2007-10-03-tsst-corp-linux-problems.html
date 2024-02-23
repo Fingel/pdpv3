@@ -1,0 +1,14 @@
+---
+categories: []
+date: 2007-10-03 00:00:00
+meta:
+  _edit_last: '1'
+published: true
+status: publish
+title: TSST corp Linux Problems
+type: post
+---
+
+My installation of Ubuntu went pretty smoothly besides the Nvidia drivers and one other problem: my TSSTcorp TS L632d ATA dvdr + rw drive was not recognized by linux. In fact it was straight invisible. Hwinfo showed nothing. Dmesg | grep cdrom showed even less. I started to think that I might have a serious bug to work out. However, the fix was simple.
+I was doing some searches through google and linuxquestions.org when I cam across a post about the live cd not booting. It was for people who have SATA harddrives, which I thought had nothing to do with the dvd drive but the described effects were the same. The fix is to simply run "modprobe piix" in order to install the correct module. When I did, the audio cd popped up on my desktop immediately. Who would have thought? In order to make the fix permanent, I edited the "/etc/initramfs-tools/modules" file to include piix at the end. Then I ran "update-initramfs -u" to update the config, restarted and everything is working perfectly. I hope anyone who is having this same problem runs accross this post.
+Cheers.
