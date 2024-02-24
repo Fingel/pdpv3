@@ -40,6 +40,12 @@ path #svg1 {
    font-family: monospace;
    font-size: 0.8em;
 }
+
+.title-link {
+   text-decoration-style: dotted;
+   color: var(--pico-foreground-color);
+}
+
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;

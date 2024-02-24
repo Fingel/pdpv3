@@ -1,14 +1,17 @@
 {% extends 'base/base.html' %}
 {% block content %}
 <h2>
-    Archives for
-    {% if year %} {{ year|date:"Y"}} {% else %} {{ month|date:"F Y" }} {% endif %}
+    {% if year %}
+        {{ year|date:"Y"}}
+    {% elif month %}
+        {{ month|date:"F Y" }}
+    {% elif category %}
+        {{ category }}
+    {% endif %}
 </h2>
-<ul>
-    {% for post in object_list %}
-    <li><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></li>
-    {% empty %}
-    <p>No posts.</p>
-    {% endfor %}
-</ul>
+{% for post in object_list %}
+    {% include 'blog/_title.html' with post=post %}
+{% empty %}
+<p>No posts.</p>
+{% endfor %}
 {% endblock %}

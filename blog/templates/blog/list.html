@@ -1,12 +1,8 @@
 {% extends 'base/base.html' %}
+{% load blog_extras %}
 {% block content %}
-<ul>
 {% for post in latest %}
-    <li>
-        <a href="{{ post.get_absolute_url }}">
-            {{ post }}
-        </a>
-    </li>
+    {% include 'blog/_title.html' with post=post %}
+    <p>{{ post.excerpt|convert_markdown }}</p>
 {% endfor %}
-</ul>
 {% endblock %}

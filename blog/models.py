@@ -23,5 +23,13 @@ class Post(models.Model):
             },
         )
 
+    @property
+    def excerpt(self) -> str:
+        splitter = "<!--more-->"
+        if splitter in self.content:
+            return self.content.split("<!--more-->")[0]
+        else:
+            return self.content.split("\n")[0]
+
     def __str__(self):
         return self.slug

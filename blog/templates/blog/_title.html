@@ -1,0 +1,15 @@
+<hgroup>
+    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+    <p>
+        ⌚{{ post.date|date:"j" }}
+        <a class="title-link" href="{% url 'blog:archive-month' post.date.year post.date.month %}">
+            {{ post.date|date:"M"}}
+        </a>
+        <a class="title-link" href="{% url 'blog:archive-year' post.date.year %}">
+            {{ post.date|date:"Y"}}
+        </a>
+        🔖{% for cat in post.categories %}
+            <a class="title-link" href="{% url 'blog:category' cat %}">{{ cat }}</a>
+        {% endfor %}
+    </p>
+</hgroup>
