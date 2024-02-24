@@ -1,0 +1,13 @@
+<div class="pagination">
+{% if page_obj.paginator.num_pages > 1 %}
+    {% if page_obj.has_previous %}
+        <div><a href="?page={{ page_obj.previous_page_number }}"><<</a></div>
+    {% endif %}
+        <progress value="{{ page_obj.number }}" max="{{ page_obj.paginator.num_pages }}">
+        </progress>
+    {% if page_obj.has_next %}
+        <div><a href="?page={{ page_obj.next_page_number }}">>></a></div>
+    {% endif %}
+{% endif %}
+</div>
+

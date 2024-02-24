@@ -46,6 +46,21 @@ path #svg1 {
    color: var(--pico-foreground-color);
 }
 
+.pagination {
+   display: flex;
+}
+
+.pagination > div {
+   margin: 0em 1em;
+}
+.pagination > div:first-child {
+   margin-left: auto;
+}
+
+.pagination > progress {
+   margin-bottom: 0;
+   margin-top: calc(var(--pico-spacing) * 0.5);
+}
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;

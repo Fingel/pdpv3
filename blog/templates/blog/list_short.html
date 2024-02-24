@@ -9,9 +9,10 @@
         {{ category }}
     {% endif %}
 </h2>
-{% for post in object_list %}
+{% for post in page_obj %}
     {% include 'blog/_title.html' with post=post %}
 {% empty %}
 <p>No posts.</p>
 {% endfor %}
+{% include 'blog/_pagination.html' with page_obj=page_obj %}
 {% endblock %}

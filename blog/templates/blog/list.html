@@ -1,8 +1,9 @@
 {% extends 'base/base.html' %}
 {% load blog_extras %}
 {% block content %}
-{% for post in latest %}
+{% for post in page_obj %}
     {% include 'blog/_title.html' with post=post %}
     <p>{{ post.excerpt|convert_markdown }}</p>
 {% endfor %}
+{% include 'blog/_pagination.html' with page_obj=page_obj %}
 {% endblock %}
