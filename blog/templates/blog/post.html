@@ -5,11 +5,22 @@
 <p>{{ object.content|convert_markdown}}</p>
 {% if object.comment_set.count > 0 %}
 <hr/>
-<p id="comments">
-    {{ object.comment_set.count }} comment{{object.comment_set.count|pluralize }}
-</p>
 {% endif %}
+<form method="POST"
+        id="comments"
+        hx-post="{% url 'blog:comment' %}"
+        hx-target="#comment-list"
+        hx-swap="afterbegin"
+        hx-on::after-request="this.reset()"
+>
+    {% csrf_token %}
+    {{ comment_form }}
+    <input type="submit" value="Add Comment">
+</form>
+
+<div id="comment-list">
 {% for comment in object.comment_set.all %}
     {% include 'blog/_comment.html' with comment=comment %}
 {% endfor %}
+</div>
 {% endblock %}

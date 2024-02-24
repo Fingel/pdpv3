@@ -62,6 +62,19 @@ path #svg1 {
    margin-top: calc(var(--pico-spacing) * 0.5);
 }
 
+label[for="id_comment_email"],
+#id_comment_email {
+   display: none;
+}
+
+.comment.htmx-added {
+   opacity: 0;
+}
+.comment {
+   opacity: 1;
+   transition: opacity 1s ease-out;
+}
+
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;

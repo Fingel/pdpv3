@@ -1,6 +1,10 @@
 <article class="comment" id="comment-{{ comment.id }}">
     <header>
-        {{ comment.commenter }}
+        {% if comment.commenter %}
+            {{ comment.commenter }}
+        {% else %}
+            anonymous
+        {% endif %}
         {% if comment.parent %}
             <em>
                 in response to
