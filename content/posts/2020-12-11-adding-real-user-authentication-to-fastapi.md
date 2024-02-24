@@ -216,7 +216,7 @@ We also define a method to get a database session. This will be used in conjunct
 
 We will also declare our `User` model, which will represent a user in the database:
 
-```python {hl_lines=[3,"23-31"]}
+```python
 from sqlalchemy.ext.asyncio import create_async_engine
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Boolean, Column, Integer, String
@@ -254,7 +254,7 @@ This is a typical Sqlalchemy declarative model. We've kept the structure the sam
 
 Speaking of changes in the main application, let's get to the meat and potatoes. We will modify `app.py` with the following:
 
-```python {hl_lines=["9-12", "29-37", "47-50", "61-63", "66-67", 86, 100 "113-114"]}
+```python
 from datetime import datetime, timedelta
 from typing import Optional
 
@@ -416,6 +416,7 @@ This will open up a sqlite3 shell. From here, we can use SQL to add a record to 
 ```sql
 INSERT INTO users VALUES (1, 'johndoe', 'johndoe@example.com', 'John Doe', false, '$2b$12$dQD2AD2Y.Aa8F3IliHPfk.yNESW7FZe3RmeT38K661sg/vds404ga');
 ```
+
 Notice the big long string at the end: it's the same hashed password ("swordfish") that we hardcoded into `fake_users_db` before!
 
 Once you've created the record, you should be able to go back to the [generated docs](127.0.0.1:8000/docs) and login as you did before. Now try out the `/users/me` endpoint, it will return the data we inserted into the database!

@@ -12,8 +12,8 @@ toc: false # Controls if a table of contents should be generated for first-level
 codeMaxLines: 0 # Override global value for how many lines within a code block before auto-collapsing.
 codeLineNumbers: true # Override global value for showing of line numbers within code block.
 categories:
-  - code
-  - python
+    - code
+    - python
 # comment: false # Disable comment if false.
 ---
 
@@ -23,7 +23,7 @@ If you've ever used Django, you might be familiar with [Django Extensions Shell 
 
 The key is to use iPython's `embed` feature to create the shell, and the SqlAlchemy class registry to auto import our models. Create a new file `shell.py`:
 
-```python {hl_lines=[3,"5-7"]}
+```python
 from IPython import embed
 
 from app.database import Base
@@ -46,6 +46,7 @@ In this snippet, you will want to **replace line 3** with the correct import pat
 Start it with `python shell.py`
 
 And you should see something like this:
+
 ```
 $ python shell.py
 Python 3.9.1 (default, Jan  8 2021, 17:17:43)

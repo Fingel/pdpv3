@@ -4,11 +4,12 @@ date: 2020-12-16T21:53:46-08:00 # Date of post creation.
 description: "An introduction to Pydantic for FastAPI developers." # Description used for search engine.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
 categories:
-  - code
-  - python
-  - tutorial
+    - code
+    - python
+    - tutorial
 # comment: false # Disable comment if false.
 ---
+
 [Pydantic](https://pydantic-docs.helpmanual.io) is one of the "secret sauces" that makes FastAPI such a powerful framework. The library is used everywhere in our projects: from validation, serialization and even configuration. Understanding better what Pydantic does and how to take advantage of it can help us write better APIs.
 
 <!--more-->
@@ -21,18 +22,14 @@ Let's imagine an API that's purpose is to provide a worldwide database of every 
 
 OK, now imagine we want to add a pie to the database. We would send some JSON that looks something like this:
 
-  POST https://allpies.io/pies/
+POST https://allpies.io/pies/
 
 ```json
 {
-  "name": "API Pie",
-  "calories": 9000,
-  "description": "A tasty pie, clean presentation but a messy filling.",
-  "ingredients": [
-    "python",
-    "pydantic",
-    "FastAPI",
-  ]
+    "name": "API Pie",
+    "calories": 9000,
+    "description": "A tasty pie, clean presentation but a messy filling.",
+    "ingredients": ["python", "pydantic", "FastAPI"]
 }
 ```
 
@@ -46,6 +43,7 @@ def create_pie(request):
     data = request.json()
     save_pie_to_database(data)
 ```
+
 This obviously will not work. What if the JSON payload is missing fields, or is malformed? `save_pie_to_database` will definitely throw an error, and we want to avoid that. So let's add a check to make sure all the required fields are supplied:
 
 ```python
@@ -57,6 +55,7 @@ def create_pie(request):
       return HTTPError('Missing fields!')
     save_pie_to_database(data)
 ```
+
 This is a little better, but still really bad. We don't even tell the client which field they are missing if they fail to send one.
 
 Even worse, we need to check to make sure the _type_ of the data is correct. What if the client sends a string for `calories`? Saving to the database will fail. So we add another check:
@@ -153,13 +152,11 @@ The script will now output:
 
 ```json
 [
-  {
-    "loc": [
-      "calories"
-    ],
-    "msg": "value is not a valid integer",
-    "type": "type_error.integer"
-  }
+    {
+        "loc": ["calories"],
+        "msg": "value is not a valid integer",
+        "type": "type_error.integer"
+    }
 ]
 ```
 
@@ -189,13 +186,11 @@ Now if we try to add our non-delicious pie, we get the following error:
 
 ```json
 [
-  {
-    "loc": [
-      "description"
-    ],
-    "msg": "We only accept delicious pies",
-    "type": "value_error"
-  },
+    {
+        "loc": ["description"],
+        "msg": "We only accept delicious pies",
+        "type": "value_error"
+    }
 ]
 ```
 
@@ -243,7 +238,6 @@ if __name__ == "__main__":
 
 Our `Pie` model is used here unchanged. Now check out line 29 in `app.py`. The route function `create_pie` takes a single parameter: pie, of type `Pie`. This tells FastAPI that this route should receive data that looks like a `Pie`.
 
-
 Make sure you have FastAPI, Uvicorn, and our favorite command-line HTTP client, [HTTPie](https://httpie.io/) installed:
 
     pip install fastapi uvicorn httpie
@@ -261,6 +255,7 @@ $ http POST http://127.0.0.1:5000/pies/ \
   calories=900 \
   ingredients:='["python", "pydantic", "FastAPI"]'
 ```
+
 We should see the following response in our terminal:
 
 ```shell
@@ -318,11 +313,12 @@ server: uvicorn
     ]
 }
 ```
+
 As expected, we get an HTTP error with a nice description of exactly what was wrong with our request.
 
 Pydantic also helps us when we want to send JSON representations of pies to our users. Let's add a method to get a fake Pie from our database and send it to the user:
 
-```python {hl_lines=["33-48"]}
+```python
 from fastapi import FastAPI
 from pydantic import BaseModel, constr, validator
 from typing import List
@@ -379,7 +375,6 @@ if __name__ == "__main__":
 Let's test the endpoint with a simple GET request:
 
     http http://127.0.0.1:5000/pie/
-
 
 And the response should be what you expect, a JSON representation of the pie we created in `get_pie_from_database`.
 

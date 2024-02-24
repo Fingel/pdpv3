@@ -1,4 +1,4 @@
-.container {
+.grid-container {
    display: grid;
    grid-template-columns: 1fr 6fr;
    grid-template-rows: 1fr;
@@ -6,6 +6,13 @@
    grid-row-gap: 20px;
    justify-items: stretch;
    align-items: baseline;
+   min-height: 0;
+   min-width: 0;
+}
+
+.content {
+   min-width: 0;
+   overflow: hidden;
 }
 
 aside {
@@ -21,12 +28,18 @@ aside {
 
 aside > nav > ul {
    text-align: center;
+   font-weight: bold;
+   line-height: 0.8em;
 }
 
 path #svg1 {
    fill: var(--pico-foreground-color);
 }
 
+.codehilite {
+   font-family: monospace;
+   font-size: 0.8em;
+}
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;
@@ -54,7 +67,7 @@ path #svg1 {
 }
 
 @media (max-width: 576px) {
-   .container {
+   .grid-container {
       padding-block: 0;
       grid-template-columns: 1fr;
    }
@@ -67,5 +80,9 @@ path #svg1 {
    }
    .logo > svg {
       height: 50px;
+   }
+
+   .container {
+      padding-top: 0;
    }
 }

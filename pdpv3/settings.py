@@ -127,9 +127,8 @@ STATIC_URL = "static/"
 STATIC_ROOT = BASE_DIR / "_static"
 STATICFILES_DIRS = [
     ("pico", BASE_DIR / "node_modules" / "@picocss" / "pico"),
-    ("prismjs", BASE_DIR / "node_modules" / "prismjs"),
-    ("prism-remote", BASE_DIR / "node_modules" / "prism-remote"),
     ("htmx", BASE_DIR / "node_modules" / "htmx.org" / "dist"),
+    ("pygments", BASE_DIR / "node_modules" / "pygments-css"),
 ]
 STORAGES = {
     "default": {

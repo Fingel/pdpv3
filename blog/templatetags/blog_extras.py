@@ -11,5 +11,6 @@ def convert_markdown(value):
         "markdown.extensions.smarty",
         "markdown.extensions.tables",
         "fenced_code",
+        "codehilite",
     ]
     return mark_safe(markdown(value, extensions=extensions))

@@ -10,12 +10,14 @@
       {% block css %}
       <link rel="stylesheet" type="text/css" href="{% static 'pico/css/pico.cyan.min.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'base/css/main.css' %}">
-      <link rel="stylesheet" type="text/css" href="{% static 'prismjs/themes/prism-tomorrow.min.css' %}">
+      <link rel="stylesheet" type="text/css" href="{% static 'pygments/github.css' %}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
+      <link rel="stylesheet" type="text/css" href="{% static 'pygments/native.css' %}" media="(prefers-color-scheme: dark)">
       {% endblock %}
       {% block extra_css %}{% endblock %}
   </head>
   <body>
-    <div class="container">
+    <main class="container">
+      <div class="grid-container">
       <aside>
         <nav>
           <ul>
@@ -27,15 +29,13 @@
           </ul>
         </nav>
       </aside>
-      <main>
+      <div class="content">
       {% block content %}
       {% endblock %}
-      </main>
+      </div>
     </div>
+    </main>
     {% block javascript %}
-    <script src="{% static 'prismjs/components/prism-core.min.js' %}"></script>
-    <script src="{% static 'prismjs/plugins/autoloader/prism-autoloader.min.js' %}"></script>
-    <script type="module" src="{% static 'prism-remote/prism-remote.js' %}"></script>
     <script src="{% static 'htmx/htmx.js' %}"></script>
     <script src="{% static 'base/js/gears.js' %}"></script>
     {% endblock %}
