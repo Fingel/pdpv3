@@ -3,4 +3,13 @@
 {% block content %}
 {% include 'blog/_title.html' with post=object %}
 <p>{{ object.content|convert_markdown}}</p>
+{% if object.comment_set.count > 0 %}
+<hr/>
+<p id="comments">
+    {{ object.comment_set.count }} comment{{object.comment_set.count|pluralize }}
+</p>
+{% endif %}
+{% for comment in object.comment_set.all %}
+    {% include 'blog/_comment.html' with comment=comment %}
+{% endfor %}
 {% endblock %}

@@ -1,6 +1,7 @@
 from django.contrib.postgres.fields import ArrayField
 from django.db import models
 from django.urls import reverse
+from django.utils import timezone
 
 
 class Post(models.Model):
@@ -33,3 +34,14 @@ class Post(models.Model):
 
     def __str__(self):
         return self.slug
+
+
+class Comment(models.Model):
+    post = models.ForeignKey(Post, on_delete=models.CASCADE)
+    parent = models.ForeignKey("self", null=True, blank=True, on_delete=models.CASCADE)
+    date = models.DateTimeField(default=timezone.now, blank=True)
+    commenter = models.CharField(max_length=200)
+    content = models.TextField()
+
+    class Meta:
+        ordering = ["-date"]

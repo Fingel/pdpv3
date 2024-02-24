@@ -1,0 +1,12 @@
+<article class="comment" id="comment-{{ comment.id }}">
+    <header>
+        {{ comment.commenter }}
+        {% if comment.parent %}
+            <em>
+                in response to
+                <a href="#comment-{{comment.parent.id}}">{{ comment.parent.commenter }}</a>
+            </em>
+        {% endif %}
+    </header>
+    {{ comment.content }}
+</article>

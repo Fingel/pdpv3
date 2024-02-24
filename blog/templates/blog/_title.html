@@ -11,5 +11,9 @@
         🔖{% for cat in post.categories %}
             <a class="title-link" href="{% url 'blog:category' cat %}">{{ cat }}</a>
         {% endfor %}
+        💬 <a class="title-link" href="{{ post.get_absolute_url }}#comments">
+                {{ post.comment_set.count }}
+            </a>
+
     </p>
 </hgroup>
