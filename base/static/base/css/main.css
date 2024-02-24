@@ -71,6 +71,7 @@ label[for="id_comment_email"],
    opacity: 0;
 }
 .comment {
+   margin: 1.5em;
    opacity: 1;
    transition: opacity 1s ease-out;
 }
