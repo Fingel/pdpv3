@@ -1,0 +1,7 @@
+{% load blog_extras %}
+<blockquote>
+    <p>{{ post.title|convert_markdown }}</p>
+    <footer>
+        <cite>{{ post.date|date:"l N j, Y f a"}}</cite>
+    </footer>
+</blockquote>

@@ -75,7 +75,22 @@ label[for="id_comment_email"],
    opacity: 1;
    transition: opacity 1s ease-out;
 }
+blockquote {
+   margin-top: calc(var(--pico-typography-spacing-vertical) * 2);
+   font-size: calc(var(--pico-font-size) * 1.1);
+   border: 2px dotted;
+   background-color: var(--pico-muted-border-color);
+}
+blockquote:before {
+   content: open-quote;
+   font-size: 4em;
+   line-height: 0.1em;
+   vertical-align: -0.4em;
+}
 
+blockquote p {
+   display: inline;
+}
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;

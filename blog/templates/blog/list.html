@@ -2,8 +2,12 @@
 {% load blog_extras %}
 {% block content %}
 {% for post in page_obj %}
-    {% include 'blog/_title.html' with post=post %}
-    <p>{{ post.excerpt|convert_markdown }}</p>
+    {% if not post.content %}
+        {% include 'blog/_micro.html' with post=post %}
+    {% else %}
+        {% include 'blog/_title.html' with post=post %}
+        <p>{{ post.excerpt|convert_markdown }}</p>
+    {% endif %}
 {% endfor %}
 {% include 'blog/_pagination.html' with page_obj=page_obj %}
 {% endblock %}
