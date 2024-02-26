@@ -9,16 +9,11 @@ class CommentAdmin(admin.ModelAdmin):
     search_fields = ["commenter", "content"]
 
 
-class InlineCommentAdmin(admin.StackedInline):
-    model = Comment
-
-
 class PostAdmin(admin.ModelAdmin):
     model = Post
     list_display = ["slug", "title", "date"]
     search_fields = ["title", "content"]
     prepopulated_fields = {"slug": ["title"]}
-    inlines = [InlineCommentAdmin]
 
 
 admin.site.register(Post, PostAdmin)
