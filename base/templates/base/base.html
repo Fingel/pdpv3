@@ -23,21 +23,21 @@
   <body>
     <main class="container">
       <div class="grid-container">
-      <aside>
-        <nav>
-          <ul>
-            <li class="logo">{% include 'base/gears.svg' %}</li>
-            <li><a href="{% url 'index' %}">About</a></li>
-            <li><a href="{% url 'blog:index' %}">Blog</a></li>
-            <li><a href="{% url 'projects' %}">Projects</a></li>
-          </ul>
-        </nav>
-      </aside>
-      <div class="content">
-      {% block content %}
-      {% endblock %}
+        <aside>
+          <nav>
+            <ul>
+              <li class="logo">{% include 'base/gears.svg' %}</li>
+              <li><a href="{% url 'index' %}">About</a></li>
+              <li><a href="{% url 'blog:index' %}">Blog</a></li>
+              <li><a href="{% url 'projects' %}">Projects</a></li>
+            </ul>
+          </nav>
+        </aside>
+        <div class="content">
+        {% block content %}
+        {% endblock %}
+        </div>
       </div>
-    </div>
     </main>
     {% block javascript %}
     <script src="{% static 'htmx/htmx.min.js' %}"></script>
