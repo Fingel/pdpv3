@@ -22,7 +22,7 @@ aside {
    background: var(--pico-background-color);
 }
 
-.logo > svg {
+.logo > a > svg {
    max-height: 150px;
 }
 
@@ -129,7 +129,7 @@ blockquote p {
       margin-top: 0;
       top: 0;
    }
-   .logo > svg {
+   .logo > a > svg {
       height: 50px;
    }
 

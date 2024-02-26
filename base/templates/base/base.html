@@ -26,8 +26,9 @@
         <aside>
           <nav>
             <ul>
-              <li class="logo">{% include 'base/gears.svg' %}</li>
-              <li><a href="{% url 'index' %}">About</a></li>
+              <li class="logo"><a href="{% url 'index' %}">
+                {% include 'base/gears.svg' %}
+              </a></li>
               <li><a href="{% url 'blog:index' %}">Blog</a></li>
               <li><a href="{% url 'projects' %}">Projects</a></li>
               <li><a href="{% url 'talks' %}">Talks</a></li>
