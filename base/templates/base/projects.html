@@ -1,0 +1,77 @@
+{% extends 'base/base.html' %}
+{% block extra_css %}
+ <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+{% endblock %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<h3>Cycling</h3>
+<ul>
+  <li>
+    <a href="https://trail.care">Trail Care</a>:
+    Trail Care is a Strava integration/service that facilitates fast and simple micro donations
+    from trail users to trail advocacy groups. It has raised thousands of dollars
+    for various trail organizations around the US. It works by checking the GPS tracks of
+    user's activities against a geospatial database of known trail organizations, and leveraging
+    Stripe to make transactions.<br/>
+    <i class="icon devicon-python-plain"></i>
+    <i class="icon devicon-django-plain"></i>
+    <i class="icon devicon-postgresql-plain"></i>
+  </li>
+  <li>
+    <a href="http://granitemaps.com">GraniteMaps</a>:
+    a collection of trail map apps for both
+    Android and iOS. The maps work 100% offline, are GPS enabled,
+    provide detailed trail descriptions and helpful information
+    on local wildlife and emergency contacts. Featured in the <a href="http://www.santacruzsentinel.com/sports/20141208/santa-cruzan-creates-local-trail-map-app">Santa Cruz Sentinel</a> and <a href="http://hilltromper.com/article/wilder-ranch-map-granitemaps">Hilltromper</a>.<br/>
+    <i class="icon devicon-javascript-plain"></i>
+    <i class="icon devicon-angularjs-plain"></i>
+    <i class="icon devicon-apple-plain"></i>
+    <i class="icon devicon-android-plain"></i>
+  </li>
+</ul>
+<h3>Development</h3>
+<ul>
+  <li>
+    <a href="https://github.com/LCOGT/django-vitals">Django Vitals:</a> django-vitals is a
+    Django app that provides health check endpoints for vital services. Extra checks are
+    easy to write or extend.<br/>
+    <a href="https://github.com/LCOGT/django-vitals">Source Code</a><br/>
+    <i class="icon devicon-python-plain"></i>
+    <i class="icon devicon-django-plain"></i>
+  </li>
+</ul>
+<h3>Astronomy</h3>
+<ul>
+  <li>
+    <a href="http://astrochallenge.com">Astrochallenge</a>: AstroChallenge is a
+    online catalog, observation list, and social network for amateur astronomers.<br/>
+    <i class="icon devicon-python-plain"></i>
+    <i class="icon devicon-django-plain"></i>
+    <i class="icon devicon-postgresql-plain"></i>
+  </li>
+</ul>
+<h3>Miscellaneous</h3>
+<ul>
+  <li>
+      <a href="/2018/09/tuimoji-terminal-emoji-chooser/">Tuimoji</a>:
+      A terminal based emoji chooser.<br/>
+      <i class="icon devicon-python-plain"></i>
+  </li>
+  <li>
+    <a href="https://play.google.com/store/apps/details?id=com.ionicframework.k9cupid">K9Cupid</a>:
+    A tinder clone for dogs. Made as a birthday gift for a special someone who really loves dogs.<br/>
+    <i class="icon devicon-javascript-plain"></i>
+    <i class="icon devicon-angularjs-plain"></i>
+    <i class="icon devicon-android-plain"></i>
+  </li>
+  <li>
+    <a href="https://participuppy.com/">Participuppy</a>: A classroom app for keeping tack of student
+    participation.<br/>
+    <i class="icon devicon-python-plain"></i>
+    <i class="icon devicon-django-plain"></i>
+    <i class="icon devicon-postgresql-plain"></i>
+    <i class="icon devicon-javscript-plain"></i>
+    <i class="icon devicon-vuejs-plain"></i>
+  </li>
+</ul>
+{% endblock %}

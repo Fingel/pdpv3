@@ -5,7 +5,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <title>
-        Pedal Driven Programming
+        {% block title %}Pedal Driven Programming{% endblock %}
       </title>
       {% block css %}
       <link rel="stylesheet" type="text/css" href="{% static 'pico/css/pico.lime.min.css' %}">
@@ -24,8 +24,7 @@
             <li class="logo">{% include 'base/gears.svg' %}</li>
             <li><a href="{% url 'index' %}">About</a></li>
             <li><a href="{% url 'blog:index' %}">Blog</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Photos</a></li>
+            <li><a href="{% url 'projects' %}">Projects</a></li>
           </ul>
         </nav>
       </aside>
