@@ -75,20 +75,20 @@ label[for="id_comment_email"],
    opacity: 1;
    transition: opacity 1s ease-out;
 }
-blockquote {
+blockquote.micro {
    margin-top: calc(var(--pico-typography-spacing-vertical) * 2);
    font-size: calc(var(--pico-font-size) * 1.1);
    border: 2px dotted;
    background-color: var(--pico-muted-border-color);
 }
-blockquote:before {
+blockquote.micro:before {
    content: open-quote;
    font-size: 4em;
    line-height: 0.1em;
    vertical-align: -0.4em;
 }
 
-blockquote p {
+blockquote.micro p {
    display: inline;
 }
 .go-clockwise {
