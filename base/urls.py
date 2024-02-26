@@ -18,5 +18,10 @@ urlpatterns = [
         TemplateView.as_view(template_name="base/other.html"),
         name="other",
     ),
+    path(
+        "talks/",
+        TemplateView.as_view(template_name="base/talks.html"),
+        name="talks",
+    ),
     path("about/", RedirectView.as_view(url="/"), name="about"),
 ]
