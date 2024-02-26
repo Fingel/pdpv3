@@ -14,8 +14,12 @@ django==5.0.2
     # via
     #   dj-database-url
     #   pedaldrivenprogramming (pyproject.toml)
+gunicorn==21.2.0
+    # via pedaldrivenprogramming (pyproject.toml)
 markdown==3.5.2
     # via pedaldrivenprogramming (pyproject.toml)
+packaging==23.2
+    # via gunicorn
 psycopg==3.1.18
     # via pedaldrivenprogramming (pyproject.toml)
 python-frontmatter==1.1.0

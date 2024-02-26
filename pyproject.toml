@@ -4,6 +4,7 @@ version = "3.0.0"
 dependencies = [
     "Django",
     "dj-database-url",
+    "gunicorn",
     "markdown",
     "psycopg",
     "python-frontmatter",

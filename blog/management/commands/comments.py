@@ -1,5 +1,5 @@
 import json
-import pathlib
+import urllib.request
 from datetime import datetime
 
 from django.core.management.base import BaseCommand
@@ -9,11 +9,11 @@ from blog.models import Comment, Post
 
 class Command(BaseCommand):
     def add_arguments(self, parser):
-        parser.add_argument("dump", type=pathlib.Path)
+        parser.add_argument("url")
 
     def handle(self, *args, **options):
-        with open(options["dump"], "r") as f:
-            comment_dump = json.loads(f.read())
+        with urllib.request.urlopen(options["url"]) as response:
+            comment_dump = json.loads(response.read())
         commenters = {}
         for commenter in comment_dump["commenters"]:
             commenters[commenter["commenterHex"]] = {**commenter}

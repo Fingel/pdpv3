@@ -28,7 +28,7 @@ SECRET_KEY = os.getenv(
 )
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
@@ -148,3 +148,8 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CONTENT_DIR = BASE_DIR / "content"
 
 SITE_ID = 1
+
+try:
+    from local_settings import *  # noqa
+except ImportError:
+    pass
