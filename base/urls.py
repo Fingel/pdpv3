@@ -1,5 +1,5 @@
 from django.urls import path
-from django.views.generic import TemplateView
+from django.views.generic import RedirectView, TemplateView
 
 urlpatterns = [
     path("", TemplateView.as_view(template_name="base/index.html"), name="index"),
@@ -18,4 +18,5 @@ urlpatterns = [
         TemplateView.as_view(template_name="base/other.html"),
         name="other",
     ),
+    path("about/", RedirectView.as_view(url="/"), name="about"),
 ]
