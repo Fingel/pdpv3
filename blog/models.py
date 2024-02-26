@@ -45,3 +45,6 @@ class Comment(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+    def __str__(self):
+        return f"{self.commenter} on {self.post}"
