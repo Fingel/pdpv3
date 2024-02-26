@@ -1,4 +1,5 @@
 {% extends 'base/base.html' %}
+{% load static %}
 {% block content %}
 <h1>Hi, I'm Austin Riba.</h1>
 <p>
@@ -12,18 +13,17 @@
     share it with the world. I still get excited about that to this day.
 </p>
 <p>
-    <a title="Pojects" href="https://www.pedaldrivenprogramming.com/projects">Projects</a>
+    <a title="Pojects" href="{% url 'projects' %}">Projects</a>
     <a title="Experience" href="#experience">Experience</a>
     <a title="Github" href="https://github.com/Fingel">
       Github
     </a>
 </p>
-<img class="img-fluid" src="/img/headshot.jpg">
+<img class="img-fluid" src="{% static 'base/img/biking.jpg' %}">
 <h2>Software Development</h2>
 <p>
 I'm happy to jump into existing projects and I excel at starting products from scratch. Taking an idea and turning it into a tangible
-product is one of my favorite aspects of development. I can work with you through the process of requirement gathering,
-  system architecture, development, deployment and iteration.
+product is one of my favorite aspects of development. I can work with you through the process of requirement gathering, architecture, development, deployment and iteration.
 </p>
 <p>
   I may be available for software consultancy.
@@ -48,10 +48,10 @@ product is one of my favorite aspects of development. I can work with you throug
 <a name="experience"><h2>Experience</h2></a>
 <table class="table">
   <tbody>
-    <tr class="experience-head">
+    <tr>
       <td>SRAM
       </td><td></td>
-      <td class="text-right">July 2022 - Present</td>
+      <td>July 2022 - Present</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -60,10 +60,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>Freelance Developer
       </td><td></td>
-      <td class="text-right">January 2020 - July 2022</td>
+      <td>January 2020 - July 2022</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -85,10 +85,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>Las Cumbres Observatory</td>
       <td>Senior Software Engineer</td>
-      <td class="text-right">August 2015-January 2020</td>
+      <td>August 2015-January 2020</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -111,10 +111,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>New Context Services</td>
       <td>Senior Software Engineer</td>
-      <td class="text-right">April 2015-August 2015</td>
+      <td>April 2015-August 2015</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -126,10 +126,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>Silent Circle LCC</td>
       <td>Senior Software Engineer</td>
-      <td class="text-right">November 2013-April 2015</td>
+      <td>November 2013-April 2015</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -145,10 +145,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>Locus Energy</td>
       <td>Software Engineer</td>
-      <td class="text-right">April 2011-October 2011</td>
+      <td>April 2011-October 2011</td>
     </tr>
     <tr>
       <td colspan="3">
@@ -161,10 +161,10 @@ product is one of my favorite aspects of development. I can work with you throug
         </ul>
       </td>
     </tr>
-    <tr class="experience-head">
+    <tr>
       <td>CSRware Inc</td>
       <td>Software Engineer</td>
-      <td class="text-right">April 2010-November 2013</td>
+      <td>April 2010-November 2013</td>
     </tr>
     <tr>
       <td colspan="3">
