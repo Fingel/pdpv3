@@ -1,6 +1,7 @@
 {% extends 'base/base.html' %}
 {% load blog_extras %}
 {% block title %}{{ object.title }}{% endblock %}
+{% block description %}{{ object.excerpt }}{% endblock %}
 {% block content %}
 {% include 'blog/_title.html' with post=object %}
 <p>{{ object.content|convert_markdown}}</p>
