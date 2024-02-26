@@ -13,4 +13,9 @@ urlpatterns = [
         TemplateView.as_view(template_name="base/contact.html"),
         name="contact",
     ),
+    path(
+        "other/",
+        TemplateView.as_view(template_name="base/other.html"),
+        name="other",
+    ),
 ]
