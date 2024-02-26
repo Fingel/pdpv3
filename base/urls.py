@@ -8,4 +8,9 @@ urlpatterns = [
         TemplateView.as_view(template_name="base/projects.html"),
         name="projects",
     ),
+    path(
+        "contact/",
+        TemplateView.as_view(template_name="base/contact.html"),
+        name="contact",
+    ),
 ]
