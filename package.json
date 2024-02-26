@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "@picocss/pico": "^2.0.3",
-    "htmx.org": "^1.9.10",
+    "htmx.org": "^2.0.0-alpha2",
     "missing.css": "1.0.13",
     "pygments-css": "^1.0.0"
   }
