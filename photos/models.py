@@ -2,7 +2,7 @@ from io import BytesIO
 
 from django.core.files.uploadedfile import InMemoryUploadedFile
 from django.db import models
-from PIL import Image
+from PIL import Image, ImageOps
 
 
 class PdpImage(models.Model):
@@ -21,6 +21,7 @@ class PdpImage(models.Model):
             return
 
         image = Image.open(self.image)
+        ImageOps.exif_transpose(image, in_place=True)
         image.thumbnail((800, 800))
         image_file = BytesIO()
         image.save(image_file, image.format)
