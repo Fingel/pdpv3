@@ -23,6 +23,7 @@ from pdpv3.sitemaps import sitemaps
 urlpatterns = [
     path("", include("base.urls")),
     path("", include("blog.urls")),
+    path("photos", include("photos.urls")),
     path("admin/", admin.site.urls),
     path(
         "sitemap.xml",

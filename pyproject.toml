@@ -3,9 +3,11 @@ name = "pedaldrivenprogramming"
 version = "3.0.0"
 dependencies = [
     "Django",
+    "django-storages[s3]",
     "dj-database-url",
     "gunicorn",
     "markdown",
+    "Pillow",
     "psycopg",
     "Pygments",
     "python-frontmatter",

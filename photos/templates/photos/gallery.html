@@ -1,0 +1,7 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h2>Gallery</h2>
+<div class="gallery">
+{% include "photos/gallery_row.html" with object_list=object_list page_obj=page_obj %}
+</div>
+{% endblock %}

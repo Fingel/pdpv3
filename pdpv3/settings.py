@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     "django.contrib.sitemaps",
     "base",
     "blog",
+    "photos",
 ]
 
 MIDDLEWARE = [
@@ -134,7 +135,13 @@ STATICFILES_DIRS = [
 ]
 STORAGES = {
     "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": "storages.backends.s3.S3Storage",
+        "OPTIONS": {
+            "bucket_name": "pedaldp",
+            "default_acl": "public-read",
+            "querystring_auth": False,
+            "location": "v3",
+        },
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
@@ -148,6 +155,7 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 CONTENT_DIR = BASE_DIR / "content"
 
 SITE_ID = 1
+
 
 try:
     from local_settings import *  # noqa
