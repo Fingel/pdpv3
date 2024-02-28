@@ -13,6 +13,9 @@ class PdpImage(models.Model):
     hidden = models.BooleanField(blank=True, default=False)
     date = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        ordering = ["-date"]
+
     def __str__(self):
         return self.image.name
 
