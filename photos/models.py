@@ -34,9 +34,9 @@ class PdpImage(models.Model):
                 image_file,
                 None,
                 None,
-                "",
+                f"image/{image.format}",
                 image_file.tell(),
-                "",
+                None,
             ),
             save=False,
         )

@@ -4,4 +4,16 @@
 <div class="gallery">
 {% include "photos/gallery_row.html" with object_list=object_list page_obj=page_obj %}
 </div>
+<a href="#" class="lightbox" id="lightbox">
+    {% with object_list|first as first_image %}
+    <span id="lightbox-bg" style="background-image: url('{{ first_image.image.url }}')"></span>
+    {% endwith %}
+</a>
+{% endblock %}
+{% block extra_javascript %}
+<script type="text/javascript">
+    function setLightbox(url){
+        document.getElementById("lightbox-bg").style.backgroundImage = `url(${url})`;
+    }
+</script>
 {% endblock %}

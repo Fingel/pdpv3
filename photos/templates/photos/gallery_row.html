@@ -8,7 +8,7 @@
         {% else %}
             <div>
         {% endif %}
-        <a href="{{ photo.image.url }}">
+        <a href="#lightbox" onclick="setLightbox('{{ photo.image.url }}')">
             <img title="{{ photo.description }}" alt="{{ photo.description }}" src="{{ photo.thumb.url }}">
         </a>
     </div>
