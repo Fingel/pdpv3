@@ -105,6 +105,7 @@ blockquote.micro p {
 }
 .gallery img {
    filter: drop-shadow(0px 0px 2px #000000);
+   min-height: 200px;
 }
 .gallery {
    margin: var(--pico-spacing);
