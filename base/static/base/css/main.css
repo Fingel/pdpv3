@@ -92,6 +92,10 @@ blockquote.micro:before {
 blockquote.micro p {
    display: inline;
 }
+
+blockquote.micro footer {
+   font-size: 0.5em;
+}
 .go-clockwise {
    animation: clockwise 3s infinite linear;
    transform-origin: 50% 50%;
