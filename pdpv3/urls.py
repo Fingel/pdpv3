@@ -21,6 +21,9 @@ from django.urls import include, path
 from pdpv3.feed import LatestPostsFeed
 from pdpv3.sitemaps import sitemaps
 
+handler404 = "base.views.page_not_found"
+handler500 = "base.views.internal_server_error"
+
 urlpatterns = [
     path("", include("base.urls")),
     path("", include("blog.urls")),
