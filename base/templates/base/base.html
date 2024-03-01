@@ -46,27 +46,25 @@
       </div>
     </main>
     <footer class="main-footer">
-      <span class="h-card">
-        <nav>
-          <ul>
-            <li>
-              <img alt="me" class="u-photo" src="{% static 'base/img/headshot.jpg' %}" width="50" height="50">
-            </li>
-            <li>
-              <a class="p-name u-url" href="https://www.pedaldrivenprogramming.com">Austin Riba</a>
-            </li>
-            <li>
-              <a href="https://github.com/Fingel" rel="me">Github</a>
-            </li>
-            <li>
-              <a class="u-email" href="mailto:austin@m51.io" rel="me">austin@m51.io</a>
-            </li>
-            <li>
-              <em>It doesn't get easier, you just get faster.</em>
-            </li>
-          </ul>
-        </nav>
-      </span>
+      <nav class="h-card">
+        <ul>
+          <li>
+            <img alt="me" class="u-photo" src="{% static 'base/img/headshot.jpg' %}" width="50" height="50">
+          </li>
+          <li>
+            <a class="p-name u-url" href="https://www.pedaldrivenprogramming.com">Austin Riba</a>
+          </li>
+          <li>
+            <a href="https://github.com/Fingel" rel="me">Github</a>
+          </li>
+          <li>
+            <a class="u-email" href="mailto:austin@m51.io" rel="me">austin@m51.io</a>
+          </li>
+          <li>
+            <em>It doesn't get easier, you just get faster.</em>
+          </li>
+        </ul>
+      </nav>
     </footer>
     {% block javascript %}
     <script defer src="{% static 'htmx/htmx.min.js' %}"></script>
