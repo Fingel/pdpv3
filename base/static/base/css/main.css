@@ -168,12 +168,12 @@ blockquote.micro footer {
    }
 }
 
-footer {
+.main-footer {
    padding: var(--pico-spacing);
    background-color: var(--pico-contrast-background);
 }
 
-footer li {
+.main-footer li {
    font-size: 0.8em;
    color: var(--pico-contrast-inverse);
 }

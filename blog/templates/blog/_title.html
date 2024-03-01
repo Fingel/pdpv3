@@ -1,19 +1,27 @@
 <hgroup>
-    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+    <h3 class="p-name">
+        <a class="u-url" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    </h3>
     <p>
-        ⌚{{ post.date|date:"j" }}
-        <a class="title-link" href="{% url 'blog:archive-month' post.date.year post.date.month %}">
-            {{ post.date|date:"M"}}
-        </a>
-        <a class="title-link" href="{% url 'blog:archive-year' post.date.year %}">
-            {{ post.date|date:"Y"}}
-        </a>
-        🔖{% for cat in post.categories %}
+        ⌚
+        <time class="dt-published" datetime="{{ post.date|date:'c' }}">
+            {{ post.date|date:"j" }}
+            <a class="title-link" href="{% url 'blog:archive-month' post.date.year post.date.month %}">
+                {{ post.date|date:"M"}}
+            </a>
+            <a class="title-link" href="{% url 'blog:archive-year' post.date.year %}">
+                {{ post.date|date:"Y"}}
+            </a>
+        </time>
+        🔖
+        <span class="p-category">
+        {% for cat in post.categories %}
             <a class="title-link" href="{% url 'blog:category' cat %}">{{ cat }}</a>
         {% endfor %}
-        💬 <a class="title-link" href="{{ post.get_absolute_url }}#comments">
-                {{ post.comment_set.count }}
-            </a>
-
+        </span>
+        💬
+        <a class="title-link" href="{{ post.get_absolute_url }}#comments">
+            {{ post.comment_set.count }}
+        </a>
     </p>
 </hgroup>

@@ -3,8 +3,10 @@
 {% block title %}{{ object.title }}{% endblock %}
 {% block description %}{{ object.excerpt|linebreaks|striptags }}{% endblock %}
 {% block content %}
+<div class="h-entry">
 {% include 'blog/_title.html' with post=object %}
-<p>{{ object.content|convert_markdown}}</p>
+<p class="e-content">{{ object.content|convert_markdown}}</p>
+</div>
 {% if object.comment_set.count > 0 %}
 <hr/>
 {% endif %}
