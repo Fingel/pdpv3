@@ -1,7 +1,7 @@
 ---
 categories:
     - code
-date: 2024-02-29 19:41:00.160485-08:00
+date: 2024-02-28 19:41:00.160485-08:00
 title: A Web Component for Highlighting Remote Code with Prism
 ---
 
