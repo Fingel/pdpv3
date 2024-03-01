@@ -1,8 +1,12 @@
 <hgroup>
-    <h3 class="p-name">
-        <a class="u-url" href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+    <h3>
+        <a class="u-url" href="{{ post.get_absolute_url }}">
+            <span class="p-name">{{ post.title }}</span>
+        </a>
     </h3>
     <p>
+        🖊️
+        <a rel="author" class="p-author h-card title-link" href="https://www.pedaldrivenprogramming.com">Austin Riba</a>
         ⌚
         <time class="dt-published" datetime="{{ post.date|date:'c' }}">
             {{ post.date|date:"j" }}
