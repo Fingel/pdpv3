@@ -14,7 +14,8 @@
         {% block title %}Pedal Driven Programming{% endblock %}
       </title>
       {% block css %}
-      <link rel="shortcut icon" href="{% static 'base/img/favicon.ico' %}"/>
+      <link rel="shortcut icon" type="image/png" href="{% static 'base/img/logo.png' %}" />
+      <link rel="shortcut icon" type="image/ico" href="{% static 'base/img/favicon.ico' %}"/>
       <link rel="stylesheet" type="text/css" href="{% static 'pico/css/pico.lime.min.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'base/css/main.css' %}">
       <link rel="stylesheet" type="text/css" href="{% static 'pygments/github.css' %}" media="(prefers-color-scheme: no-preference), (prefers-color-scheme: light)">
@@ -25,7 +26,7 @@
   <body>
     <main class="container">
       <div class="grid-container">
-        <aside>
+        <aside class="main-nav">
           <nav>
             <ul>
               <li class="logo"><a href="{% url 'index' %}">
@@ -44,6 +45,29 @@
         </div>
       </div>
     </main>
+    <footer>
+      <span class="h-card">
+        <nav>
+          <ul>
+            <li>
+              <img alt="me" class="u-photo" src="{% static 'base/img/headshot.jpg' %}" width="50" height="50">
+            </li>
+            <li>
+              <a class="p-name u-url" href="https://www.pedaldrivenprogramming.com">Austin Riba</a>
+            </li>
+            <li>
+              <a href="https://github.com/Fingel" rel="me">Github</a>
+            </li>
+            <li>
+              <a class="u-email" href="mailto:austin@m51.io" rel="me">austin@m51.io</a>
+            </li>
+            <li>
+              <em>It doesn't get easier, you just get faster.</em>
+            </li>
+          </ul>
+        </nav>
+      </span>
+    </footer>
     {% block javascript %}
     <script defer src="{% static 'htmx/htmx.min.js' %}"></script>
     <script async src="{% static 'base/js/gears.js' %}"></script>

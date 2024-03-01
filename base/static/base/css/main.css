@@ -15,7 +15,7 @@
    overflow: hidden;
 }
 
-aside {
+.main-nav {
    position: sticky;
    margin-top: var(--pico-spacing);
    top: -110px;
@@ -27,7 +27,7 @@ aside {
    max-height: 150px;
 }
 
-aside > nav > ul {
+.main-nav > nav > ul {
    text-align: center;
    font-weight: bold;
    line-height: 0.8em;
@@ -168,15 +168,25 @@ blockquote.micro footer {
    }
 }
 
+footer {
+   padding: var(--pico-spacing);
+   background-color: var(--pico-contrast-background);
+}
+
+footer li {
+   font-size: 0.8em;
+   color: var(--pico-contrast-inverse);
+}
+
 @media (max-width: 576px) {
    .grid-container {
       padding-block: 0;
       grid-template-columns: 1fr;
    }
-   aside ul {
+   .main-nav ul {
       display: flex;
    }
-   aside {
+   .main-nav {
       margin-top: 0;
       top: 0;
    }
