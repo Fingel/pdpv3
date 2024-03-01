@@ -5,7 +5,7 @@
 {% block content %}
 <div class="h-entry">
 {% include 'blog/_title.html' with post=object %}
-<p class="e-content">{{ object.content|convert_markdown}}</p>
+<div class="e-content">{{ object.content|convert_markdown}}</div>
 </div>
 {% if object.comment_set.count > 0 %}
 <hr/>
