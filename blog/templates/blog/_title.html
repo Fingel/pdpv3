@@ -10,10 +10,10 @@
         ⌚
         <time class="dt-published" datetime="{{ post.date|date:'c' }}">
             {{ post.date|date:"j" }}
-            <a class="title-link" href="{% url 'blog:archive-month' post.date.year post.date.month %}">
+            <a class="title-link" href="{% url 'blog:archive-month' post.date|date:'Y' post.date|date:'m' %}">
                 {{ post.date|date:"M"}}
             </a>
-            <a class="title-link" href="{% url 'blog:archive-year' post.date.year %}">
+            <a class="title-link" href="{% url 'blog:archive-year' post.date|date:'Y' %}">
                 {{ post.date|date:"Y"}}
             </a>
         </time>
