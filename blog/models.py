@@ -30,7 +30,10 @@ class Post(models.Model):
         if splitter in self.content:
             return self.content.split("<!--more-->")[0]
         else:
-            return self.content.split("\n")[0]
+            if len(self.content) < 500:
+                return self.content
+            else:
+                return self.content.split("\n")[0]
 
     def __str__(self):
         return self.slug
