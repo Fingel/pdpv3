@@ -3,6 +3,7 @@ categories:
     - code
 date: 2024-03-05 10:16:26.840855-08:00
 title: Should MIT Really be the Default License?
+image: https://pedaldp.s3.us-west-2.amazonaws.com/v3/images/mitlicense.jpg
 ---
 
 When and why did MIT become the default license for open source projects?

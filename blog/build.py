@@ -20,6 +20,7 @@ def import_post(path: Path) -> tuple[Post, bool]:
         title = post["title"]
         categories = post["categories"]
         date = post["date"]
+        image = post.get("image", "")
         content = post.content
 
     # Try setting timezone to west coast if not supplied
@@ -33,6 +34,7 @@ def import_post(path: Path) -> tuple[Post, bool]:
             "categories": categories,
             "date": date,
             "content": content,
+            "image": image,
         },
     )
     return post, created

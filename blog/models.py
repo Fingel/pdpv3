@@ -10,6 +10,7 @@ class Post(models.Model):
     date = models.DateTimeField(db_index=True)
     categories = ArrayField(models.CharField(max_length=50), blank=True)
     content = models.TextField(blank=True, default="")
+    image = models.URLField(blank=True, default="")
 
     class Meta:
         ordering = ["-date"]

@@ -2,6 +2,7 @@
 {% load blog_extras %}
 {% block title %}{{ object.title }}{% endblock %}
 {% block description %}{{ object.excerpt|linebreaks|striptags }}{% endblock %}
+{% block meta_image %}{% if post.image %}{{ post.image }}{% else %}{{block.super}}{% endif %}{% endblock %}
 {% block content %}
 <div class="h-entry">
 {% include 'blog/_title.html' with post=object %}
