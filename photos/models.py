@@ -1,3 +1,4 @@
+import secrets
 from io import BytesIO
 
 from django.core.files.uploadedfile import InMemoryUploadedFile
@@ -5,9 +6,17 @@ from django.db import models
 from PIL import Image, ImageOps
 
 
+def image_upload_salt(instance, filename):
+    return f"images/{instance.image_salt}-{filename}"
+
+
+def thumb_upload_salt(instance, filename):
+    return f"images/thumb/{instance.image_salt}-{filename}"
+
+
 class PdpImage(models.Model):
-    image = models.ImageField(upload_to="images/")
-    thumb = models.ImageField(upload_to="images/thumb/", blank=True, null=True)
+    image = models.ImageField(upload_to=image_upload_salt)
+    thumb = models.ImageField(upload_to=thumb_upload_salt, blank=True, null=True)
     description = models.CharField(max_length=200, blank=True, default="")
     private = models.BooleanField(blank=True, default=True)
     hidden = models.BooleanField(blank=True, default=False)
@@ -15,6 +24,10 @@ class PdpImage(models.Model):
 
     class Meta:
         ordering = ["-date"]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.image_salt = secrets.token_urlsafe(8)
 
     def __str__(self):
         return self.image.name
