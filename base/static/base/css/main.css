@@ -1,6 +1,16 @@
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+   --pico-background-color: #fdf6e3;
+}
+@media only screen and (prefers-color-scheme: dark) {
+   :root:not([data-theme]) {
+      --pico-background-color: #13171f;
+   }
+}
 body {
    min-height: 100vh;
    position: relative;
+   background-color: var(--pico-background-color);
 }
 .grid-container {
    display: grid;
@@ -24,7 +34,6 @@ body {
    position: sticky;
    margin-top: var(--pico-spacing);
    top: -110px;
-   background: var(--pico-background-color);
    z-index: 99;
 }
 
@@ -45,6 +54,10 @@ path #svg1 {
 .codehilite {
    font-family: monospace;
    font-size: 0.8rem;
+}
+
+pre > code {
+   background: var(--pico-background-color);
 }
 
 .title-link {
