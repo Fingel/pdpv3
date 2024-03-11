@@ -5,7 +5,7 @@ from blog.models import Comment, Post
 
 class CommentAdmin(admin.ModelAdmin):
     model = Comment
-    list_display = ["commenter", "content", "post", "date"]
+    list_display = ["id", "commenter", "content", "post", "date"]
     search_fields = ["commenter", "content"]
 
 

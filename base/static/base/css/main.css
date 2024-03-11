@@ -81,6 +81,16 @@ label[for="id_comment_email"],
    opacity: 1;
    transition: opacity 1s ease-out;
 }
+
+.comment header {
+   display: flex;
+}
+
+.comment time {
+   flex: 1;
+   text-align: right;
+}
+
 blockquote.micro {
    margin-top: calc(var(--pico-typography-spacing-vertical) * 2);
    font-size: calc(var(--pico-font-size) * 1.1);

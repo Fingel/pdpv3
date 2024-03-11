@@ -7,10 +7,11 @@
         {% endif %}
         {% if comment.parent %}
             <em>
-                in response to
+                &nbsp;in response to
                 <a href="#comment-{{comment.parent.id}}">{{ comment.parent.commenter }}</a>
             </em>
         {% endif %}
+        <time datetime="{{comment.date|date:'c'}}">{{ comment.date }}</time>
     </header>
     {{ comment.content }}
 </article>
