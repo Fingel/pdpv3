@@ -9,7 +9,10 @@
             <div>
         {% endif %}
         <a href="#lightbox" onclick="setLightbox('{{ photo.image.url }}')">
-            <img title="{{ photo.description }}" alt="{{ photo.description }}" src="{{ photo.thumb.url }}">
+            <figure>
+                <img title="{{ photo.description }}" alt="{{ photo.description }}" src="{{ photo.thumb.url }}">
+                <figcaption>{{ photo.description }} <br/> {{ photo.date }}</figcaption>
+            </figure>
         </a>
     </div>
     {% endfor %}

@@ -44,7 +44,7 @@ path #svg1 {
 
 .codehilite {
    font-family: monospace;
-   font-size: 0.8em;
+   font-size: 0.8rem;
 }
 
 .title-link {
@@ -156,6 +156,26 @@ blockquote.micro footer {
    background-repeat: no-repeat;
    background-size: contain;
 }
+
+figure {
+   position: relative;
+}
+
+figure figcaption {
+   font-size: 0.8rem;
+   color: #ffffff;
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 3rem 0.5rem 0rem;
+   background: linear-gradient(
+      to top,
+      hsla(230, 40%, 5%, 0.95),
+      hsla(230, 40%, 5%, 0)
+   );
+}
+
 @keyframes clockwise {
    0% {
       transform: rotate(0deg);
@@ -182,7 +202,7 @@ blockquote.micro footer {
 }
 
 .main-footer li {
-   font-size: 0.8em;
+   font-size: 0.8rem;
    color: var(--pico-contrast-inverse);
 }
 
