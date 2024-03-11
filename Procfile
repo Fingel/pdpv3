@@ -1,2 +1,2 @@
-release: ./release-tasks.sh
+release: make release
 web: gunicorn pdpv3.wsgi
