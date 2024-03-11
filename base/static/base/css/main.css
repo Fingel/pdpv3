@@ -34,6 +34,7 @@ body {
    position: sticky;
    margin-top: var(--pico-spacing);
    top: -110px;
+   background: var(--pico-background-color);
    z-index: 99;
 }
 
