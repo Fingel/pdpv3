@@ -1,6 +1,12 @@
 {% extends 'base/base.html' %}
 {% block content %}
-<h2>Gallery</h2>
+<hgroup>
+    <h2>Gallery</h2>
+    {% if not request.user.is_authenticated %}
+    <p><a href="{% url 'login' %}">Show me baby 👶</a></p>
+    {% endif %}
+</hgroup>
+
 <div class="gallery">
 {% include "photos/gallery_row.html" with object_list=object_list page_obj=page_obj %}
 </div>

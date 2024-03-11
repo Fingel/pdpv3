@@ -5,7 +5,7 @@ from photos.models import PdpImage
 
 
 class PdpImageAdmin(admin.ModelAdmin):
-    list_display = ["id", "full_url", "date", "description", "preview"]
+    list_display = ["id", "full_url", "date", "description", "private", "preview"]
     search_fields = ["description"]
     readonly_fields = ["thumb", "preview", "full_url"]
     fields = [

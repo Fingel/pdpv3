@@ -1,0 +1,11 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{ form.username.as_hidden }}
+    <div class="fieldwrapper">
+        {{ form.password.as_field_group }}
+    </div>
+    <input type="submit" value="Show me the baby pictures!">
+</form>
+{% endblock %}
