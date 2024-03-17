@@ -14,6 +14,8 @@ HTTP servers, much less what it would take to implement one. So it made perfect 
 started to learn Zig to build one. The problem space is a nice mix of socket programming and
 string handling.
 
+<!--more-->
+
 The source is available [on Github](https://github.com/Fingel/zig-http-server/tree/main).
 
 To start the server:
